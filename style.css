@@ -6,7 +6,7 @@ body {
 .container {
     max-width: 550px;
     margin: 30px auto;
-    max-height: 208px;
+    height: 779px;
 }
 
 .header {
@@ -17,6 +17,7 @@ body {
     justify-content: space-around;
     align-items: center;
 }
+
 
 .header h2 {
     font-weight: 800;
@@ -29,4 +30,49 @@ body {
     font-weight: 700;
     font-size: 14px;
     line-height: 20px
+}
+
+form {
+    width: 462px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+
+}
+
+#input-container {
+    position: relative;
+}
+
+#input-container>img {
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    opacity: 0.2;
+}
+
+input[type="text"] {
+    line-height: 35px;
+    width: 342px;
+    border: 1px solid #121212;
+    border-radius: 6px 0 0 6px;
+    padding-left: 39px;
+    background-color: #2E2E2F;
+    color: white;
+}
+
+#search-movie {
+    width: 120px;
+    height: 39px;
+    border: 1px solid #121212;
+    border-width: 1px 1px 1px 0;
+    border-radius: 0 6px 6px 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #4B4B4B;
+    color: white;
+    cursor: pointer;
 }
