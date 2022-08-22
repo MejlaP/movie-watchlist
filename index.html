@@ -17,7 +17,7 @@
     <div class="container">
         <div class="header">
             <h2>Find your film</h2>
-            <h4>My Watchlist</h4>
+            <h4><a href="watchlist.html">My Watchlist</a></h4>
         </div>
         <form>
             <div id="input-container">
@@ -27,25 +27,29 @@
             <button id="search-movie">Search</button>
         </form>
         <div id="found-movies">
-            <img src="https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
-                alt="found-movie">
             <div class="movie-container">
-                <div class="movie-title">
-                    <h5>Blade Runner</h5>
-                    <img src="./img/starIcon.png">
-                    <h6>8.1</h6>
-                </div>
-                <div class="movie-info">
-                    <h6>116 min</h6>
-                    <h6>Drama, Mystery, Sci-fi</h6>
-                    <div class="add-watchlist">
-                        <img src="./img/addIcon.png" />
-                        <h6>Watchlist</h6>
+                <img src="https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+                    alt="found-movie">
+                <div class="movie-card">
+                    <div class="movie-title">
+                        <h5>Blade Runner</h5>
+                        <img src="./img/starIcon.png">
+                        <h6>8.1</h6>
                     </div>
+                    <div class="movie-info">
+                        <h6>116 min</h6>
+                        <h6>Drama, Mystery, Sci-fi</h6>
+                        <div class="add-watchlist">
+                            <img src="./img/addIcon.png" id="add-to-watchlist" />
+                            <h6>Watchlist</h6>
+                        </div>
+                    </div>
+                    <p class="movie-description">A blade runner must pursue and terminate four replicants who stole a
+                        ship in space, and have
+                        returned
+                        to Earth to find
+                        their creator.</p>
                 </div>
-                <p>A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned
-                    to Earth to find
-                    their creator.</p>
             </div>
         </div>
     </div>

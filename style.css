@@ -81,15 +81,11 @@ input[type="text"] {
 #found-movies {
     margin-top: 42px;
     margin-left: 44px;
-    display: flex;
-    align-items: center;
-    border: 1.5px solid #2C2C2C;
-    border-width: 0 0 1.5px 0;
     margin-right: 44px;
-    padding-bottom: 20px
+    padding-bottom: 20px;
 }
 
-#found-movies p {
+.movie-description {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -97,26 +93,26 @@ input[type="text"] {
 
 }
 
-#found-movies>img {
-    width: 99px;
-    height: 147px
-}
-
 .movie-container {
-    margin-left: 21px;
-}
-
-
-.movie-container>img {
-    margin-left: 8px;
-    width: 15px;
-}
-
-.movie-title, .movie-info {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
+    gap: 21px;
+    border: 1.5px solid #2C2C2C;
+    border-width: 0 0 1.5px 0;
+    padding-bottom: 20px
 }
+
+.movie-container>img {
+    width: 99px
+}
+
+.movie-title {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
 
 .movie-title h5 {
     font-weight: 500;
@@ -143,10 +139,8 @@ input[type="text"] {
     font-size: 12px;
     line-height: 20px;
     gap: 20px;
-}
-
-.movie-info:last-child {
-    color: red
+    display: flex;
+    margin-bottom: 8px;
 }
 
 .movie-info img {
@@ -156,4 +150,14 @@ input[type="text"] {
 .add-watchlist {
     display: flex;
     gap: 2px;
+}
+
+h4 a {
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#add-to-watchlist {
+    cursor: pointer;
 }
