@@ -33,10 +33,41 @@ async function getApiMovies(inputValue) {
             const dataInfo = await responseInfo.json()
             movieInfoArray.push(dataInfo)
         }
+        // call function renderMovies
+        renderMovies(movieInfoArray)
         console.log(movieInfoArray)
     }
     else {
         console.log('Nothing')
     }
+}
+
+// function with array as parameter, create empty element and then loop the movies array
+function renderMovies(moviesArray) {
+    let htmlMovies = ""
+    for (let i = 0; i < moviesArray.length; i++) {
+        htmlMovies +=   `<div class="movie-container">
+                            <img src="${moviesArray[i].Poster}" alt="found-movie">
+                            <div class="movie-card">
+                                <div class="movie-title">
+                                    <h5>${moviesArray[i].Title}</h5>
+                                    <img src="./img/starIcon.png">
+                                    <h6>${moviesArray[i].imdbRating}</h6>
+                                </div>
+                                <div class="movie-info">
+                                    <h6>${moviesArray[i].Runtime}</h6>
+                                    <h6>${moviesArray[i].Genre}</h6>
+                                    <div class="add-watchlist">
+                                        <img src="./img/addIcon.png" id="add-to-watchlist" />
+                                        <h6>Watchlist</h6>
+                                    </div>
+                                </div>
+                                <p class="movie-description">${moviesArray[i].Plot}</p>
+                            </div>
+                        </div>`
+    }
+
+    // element htmlMovies as innerHTML
+    foundedMovies.innerHTML = htmlMovies
 }
 

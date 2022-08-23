@@ -6,7 +6,7 @@ body {
 .container {
     max-width: 550px;
     margin: 30px auto;
-    height: 779px;
+    min-height: 779px;
     background-color: #121212;
 }
 
@@ -99,7 +99,7 @@ input[type="text"] {
     gap: 21px;
     border: 1.5px solid #2C2C2C;
     border-width: 0 0 1.5px 0;
-    padding-bottom: 20px
+    padding: 20px 0 20px 0;
 }
 
 .movie-container>img {
