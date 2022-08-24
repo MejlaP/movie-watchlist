@@ -102,6 +102,10 @@ input[type="text"] {
     padding: 20px 0 20px 0;
 }
 
+#found-movies :last-child {
+    border: none;
+}
+
 .movie-container>img {
     width: 99px
 }
@@ -112,7 +116,6 @@ input[type="text"] {
     margin-bottom: 8px;
     align-items: center;
 }
-
 
 .movie-title h5 {
     font-weight: 500;
@@ -152,12 +155,35 @@ input[type="text"] {
     gap: 2px;
 }
 
+.add-watchlist h6 {
+    cursor: pointer
+}
+
 h4 a {
     color: #FFFFFF;
     text-decoration: none;
     cursor: pointer;
 }
 
-#add-to-watchlist {
-    cursor: pointer;
+.start-exploring-icon {
+    display: block;
+    width: 70px;
+    margin: 211px auto 9px;
+}
+
+.start-exploring {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #2E2E2F;
+}
+
+.unable-to-find {
+    margin-top: 211px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #787878;
 }

@@ -7,6 +7,9 @@ const foundedMovies = document.getElementById('found-movies')
 const myApiKey = '98bea6a8'
 const baseUrl = 'https://www.omdbapi.com/'
 
+// initialize movies array with all information
+let movieInfoArray = []
+
 // execute function after click search button
 searchButton.addEventListener('click', (event) => {
     event.preventDefault()
@@ -27,7 +30,7 @@ async function getApiMovies(inputValue) {
         const foundMoviesArray = dataTitle.Search
 
         // create array for movies with other info, fetch with imdbID paramater
-        let movieInfoArray = []
+        movieInfoArray = []
         for (const foundMovie of foundMoviesArray) {
             const responseInfo = await fetch(`${baseUrl}?i=${foundMovie.imdbID}&plot=short&apikey=${myApiKey}`)
             const dataInfo = await responseInfo.json()
@@ -38,15 +41,18 @@ async function getApiMovies(inputValue) {
         console.log(movieInfoArray)
     }
     else {
-        console.log('Nothing')
+        foundedMovies.innerHTML =
+            `<h6 class="unable-to-find" >Unable to find what you’re looking for. 
+                Please try another search.</h6>`
     }
 }
+
 
 // function with array as parameter, create empty element and then loop the movies array
 function renderMovies(moviesArray) {
     let htmlMovies = ""
     for (let i = 0; i < moviesArray.length; i++) {
-        htmlMovies +=   `<div class="movie-container">
+        htmlMovies += `<div class="movie-container">
                             <img src="${moviesArray[i].Poster}" alt="found-movie">
                             <div class="movie-card">
                                 <div class="movie-title">
@@ -58,8 +64,8 @@ function renderMovies(moviesArray) {
                                     <h6>${moviesArray[i].Runtime}</h6>
                                     <h6>${moviesArray[i].Genre}</h6>
                                     <div class="add-watchlist">
-                                        <img src="./img/addIcon.png" id="add-to-watchlist" />
-                                        <h6>Watchlist</h6>
+                                        <img src="./img/addIcon.png" class="add-to-watchlist" />
+                                        <h6 id="${moviesArray[i].imdbID}" onclick ="addToWatchList(this.id, event)">Watchlist</h6>
                                     </div>
                                 </div>
                                 <p class="movie-description">${moviesArray[i].Plot}</p>
@@ -69,5 +75,13 @@ function renderMovies(moviesArray) {
 
     // element htmlMovies as innerHTML
     foundedMovies.innerHTML = htmlMovies
+}
+
+// add movie to watchlist
+function addToWatchList(IdMovie, event) {
+    const myMovie = movieInfoArray.filter(movie => movie.imdbID === IdMovie)
+    console.log(myMovie)
+    event.target.textContent = "Added!"
+    localStorage.setItem("myMovie", myMovie)
 }
 
