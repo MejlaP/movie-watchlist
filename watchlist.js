@@ -1,7 +1,10 @@
+// get items from local storage for following render
 let moviesFromLocalStorage = JSON.parse(localStorage.getItem('session'))
+
+// grab element
 const foundedMovies = document.getElementById('found-movies')
 
-
+// function for rendering movies
 function renderMoviesFromLocalStorage(moviesArray) {
     let htmlMovies = ""
     for (const movie of moviesArray) {
@@ -30,10 +33,19 @@ function renderMoviesFromLocalStorage(moviesArray) {
     foundedMovies.innerHTML = htmlMovies
 }
 
+// render movies from local storage
 renderMoviesFromLocalStorage(moviesFromLocalStorage)
 
+// function for deleting movie
 const deleteMovie = (IdOfMovie) => {
-    moviesFromLocalStorage.splice(IdOfMovie, 1)
+    
+    // get index of object with id of IdOfMovie
+    const removeMovieById = moviesFromLocalStorage.findIndex(movie => movie.imdbID === IdOfMovie);
+    
+    // remove object
+    moviesFromLocalStorage.splice(removeMovieById, 1)
+
+    // insert updated session to local storage
     localStorage.setItem("session", JSON.stringify(moviesFromLocalStorage))
     renderMoviesFromLocalStorage(moviesFromLocalStorage)
 }
