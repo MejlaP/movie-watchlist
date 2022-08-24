@@ -79,7 +79,7 @@ function renderMovies(moviesArray) {
 
 // add movie to watchlist
 function addToWatchList(IdMovie, event) {
-    const myMovie = movieInfoArray.filter(movie => movie.imdbID === IdMovie)
+    const myMovie = movieInfoArray.find(movie => movie.imdbID === IdMovie)
     console.log(myMovie)
     event.target.textContent = ""
     saveDataToLocalStorage(myMovie)
@@ -95,4 +95,3 @@ function saveDataToLocalStorage(data) {
     // Re-serialize the array back into a string and store it in localStorage
     localStorage.setItem('session', JSON.stringify(myArray));
 }
-
