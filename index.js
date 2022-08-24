@@ -81,7 +81,18 @@ function renderMovies(moviesArray) {
 function addToWatchList(IdMovie, event) {
     const myMovie = movieInfoArray.filter(movie => movie.imdbID === IdMovie)
     console.log(myMovie)
-    event.target.textContent = "Added!"
-    localStorage.setItem("myMovie", myMovie)
+    event.target.textContent = ""
+    saveDataToLocalStorage(myMovie)
+}
+
+// save movie to the local storage
+function saveDataToLocalStorage(data) {
+    let myArray = [];
+    // Parse the serialized data back into an aray of objects
+    myArray = JSON.parse(localStorage.getItem('session')) || [];
+    // Push the new data (whether it be an object or anything else) onto the array
+    myArray.push(data);
+    // Re-serialize the array back into a string and store it in localStorage
+    localStorage.setItem('session', JSON.stringify(myArray));
 }
 
