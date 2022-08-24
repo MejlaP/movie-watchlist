@@ -51,24 +51,24 @@ async function getApiMovies(inputValue) {
 // function with array as parameter, create empty element and then loop the movies array
 function renderMovies(moviesArray) {
     let htmlMovies = ""
-    for (let i = 0; i < moviesArray.length; i++) {
+    for (const movie of moviesArray) {
         htmlMovies += `<div class="movie-container">
-                            <img src="${moviesArray[i].Poster}" alt="found-movie">
+                            <img src="${movie.Poster}" alt="found-movie">
                             <div class="movie-card">
                                 <div class="movie-title">
-                                    <h5>${moviesArray[i].Title}</h5>
+                                    <h5>${movie.Title}</h5>
                                     <img src="./img/starIcon.png">
-                                    <h6>${moviesArray[i].imdbRating}</h6>
+                                    <h6>${movie.imdbRating}</h6>
                                 </div>
                                 <div class="movie-info">
-                                    <h6>${moviesArray[i].Runtime}</h6>
-                                    <h6>${moviesArray[i].Genre}</h6>
+                                    <h6>${movie.Runtime}</h6>
+                                    <h6>${movie.Genre}</h6>
                                     <div class="add-watchlist">
                                         <img src="./img/addIcon.png" class="add-to-watchlist" />
-                                        <h6 id="${moviesArray[i].imdbID}" onclick ="addToWatchList(this.id, event)">Watchlist</h6>
+                                        <h6 id="${movie.imdbID}" onclick ="addToWatchList(this.id, event)">Watchlist</h6>
                                     </div>
                                 </div>
-                                <p class="movie-description">${moviesArray[i].Plot}</p>
+                                <p class="movie-description">${movie.Plot}</p>
                             </div>
                         </div>`
     }
