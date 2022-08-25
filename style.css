@@ -102,6 +102,11 @@ input[type="text"] {
     padding: 20px 0 20px 0;
 }
 
+.movie-watchlist {
+    border: 1.5px solid #E5E7EB;
+    border-width: 0 0 1.5px 0;
+}
+
 #found-movies :last-child {
     border: none;
 }
@@ -186,4 +191,36 @@ h4 a {
     line-height: 20px;
     text-align: center;
     color: #787878;
+}
+
+.empty-watchlist {
+    margin: 212px auto 0;
+    text-align: center
+}
+
+.empty-watchlist h6 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #787878;
+    margin-bottom: 15px;
+}
+
+.empty-watchlist-text-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-watchlist-text-icon p {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.empty-watchlist-text-icon img {
+    width: 20px
 }
