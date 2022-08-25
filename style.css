@@ -19,7 +19,6 @@ body {
     align-items: center;
 }
 
-
 .header h2 {
     font-weight: 800;
     font-size: 48px;
@@ -90,7 +89,6 @@ input[type="text"] {
     font-size: 14px;
     line-height: 20px;
     color: #A5A5A5;
-
 }
 
 .movie-container {
@@ -134,7 +132,6 @@ input[type="text"] {
     padding-top: 2px;
     margin-left: 3px
 }
-
 
 .movie-title img {
     margin: 0 4px;
