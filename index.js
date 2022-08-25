@@ -2,7 +2,6 @@
 const searchButton = document.getElementById('search-movie')
 const foundedMovies = document.getElementById('found-movies')
 
-
 // API sources
 const myApiKey = '98bea6a8'
 const baseUrl = 'https://www.omdbapi.com/'
@@ -38,7 +37,6 @@ async function getApiMovies(inputValue) {
         }
         // call function renderMovies
         renderMovies(movieInfoArray)
-        console.log(movieInfoArray)
     }
     else {
         foundedMovies.innerHTML =
@@ -63,9 +61,9 @@ function renderMovies(moviesArray) {
                                 <div class="movie-info">
                                     <h6>${movie.Runtime}</h6>
                                     <h6>${movie.Genre}</h6>
-                                    <div class="add-watchlist">
-                                        <img src="./img/addIcon.png" class="add-to-watchlist" />
-                                        <h6 id="${movie.imdbID}" onclick ="addToWatchList(this.id, event)">Watchlist</h6>
+                                    <div class="add-watchlist" id="${movie.imdbID}" onclick ="addToWatchList(this.id, event)">
+                                        <img src="./img/addIcon.png" class="add-to-watchlist">
+                                        <h6>Watchlist</h6>
                                     </div>
                                 </div>
                                 <p class="movie-description">${movie.Plot}</p>
@@ -80,8 +78,7 @@ function renderMovies(moviesArray) {
 // add movie to watchlist
 function addToWatchList(IdMovie, event) {
     const myMovie = movieInfoArray.find(movie => movie.imdbID === IdMovie)
-    console.log(myMovie)
-    event.target.textContent = ""
+    event.currentTarget.remove()
     saveDataToLocalStorage(myMovie)
 }
 
