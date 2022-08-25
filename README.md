@@ -10,7 +10,7 @@
   - Watchlist.html loads and displays data from local storage
 
 
-![image1](https://user-images.githubusercontent.com/90547920/186639712-6379b2aa-08a5-4d2c-bca8-cf7c1fb84121.PNG)
-![image2](https://user-images.githubusercontent.com/90547920/186639944-78041ca3-f83d-485e-addf-26d2a7b71ecd.PNG)
-![image3](https://user-images.githubusercontent.com/90547920/186640136-542988c3-fd18-4925-8e15-68fe44fb0a50.PNG)
-![image4](https://user-images.githubusercontent.com/90547920/186639966-7283bcb8-6772-4e60-80d8-e7e2df27aeda.PNG)
+![image1](https://user-images.githubusercontent.com/90547920/186640837-df120f1e-6be4-4ceb-8a44-d631f4082c74.PNG)
+![image2](https://user-images.githubusercontent.com/90547920/186640848-c8dfce1a-4023-4591-b8a1-9c84fb754a30.PNG)
+![image3](https://user-images.githubusercontent.com/90547920/186640857-070ce33c-31cf-41a3-825c-17bdcebb4095.PNG)
+![image4](https://user-images.githubusercontent.com/90547920/186640864-e026ed67-a099-43ef-8425-3a0930bba4f4.PNG)
