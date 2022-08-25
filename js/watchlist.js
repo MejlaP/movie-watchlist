@@ -42,9 +42,9 @@ function renderMoviesFromLocalStorage(moviesArray) {
     else {
         foundedMovies.innerHTML = `<div class="empty-watchlist">
                                         <h6>Your watchlist is looking a little empty...</h6>
-                                        <a href="./index.html">
+                                        <a href="../index.html">
                                         <div class="empty-watchlist-text-icon">
-                                        <img src="./img/addicon.png" alt="-">
+                                        <img src="../img/addicon.png" alt="-">
                                         <p>Let’s add some movies!</p>
                                         </div>
                                         </a>

@@ -62,7 +62,7 @@ function renderMovies(moviesArray) {
                                     <h6>${movie.Runtime}</h6>
                                     <h6>${movie.Genre}</h6>
                                     <div class="add-watchlist" id="${movie.imdbID}" onclick ="addToWatchList(this.id, event)">
-                                        <img src="./img/addicon.png" class="add-to-watchlist" alt="+">
+                                        <img src="../img/addicon.png" class="add-to-watchlist" alt="+">
                                         <h6>Watchlist</h6>
                                     </div>
                                 </div>
