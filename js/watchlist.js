@@ -25,7 +25,7 @@ function renderMoviesFromLocalStorage(moviesArray) {
                                     <h6>${movie.Runtime}</h6>
                                     <h6>${movie.Genre}</h6>
                                     <div class="remove-watchlist" id="${movie.imdbID}" onclick ="deleteMovie(this.id)">
-                                        <img src="../img/deleteIcon.png"/>
+                                        <img src="./../img/deleteIcon.png"/>
                                         <h6>Remove</h6>
                                     </div>
                                 </div>
