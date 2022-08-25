@@ -229,3 +229,11 @@ h4 a {
     width: 20px;
     margin-right: 3px;
 }
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}

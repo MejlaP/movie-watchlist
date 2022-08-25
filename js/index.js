@@ -55,14 +55,14 @@ function renderMovies(moviesArray) {
                             <div class="movie-card">
                                 <div class="movie-title">
                                     <h5>${movie.Title}</h5>
-                                    <img src="./img/starIcon.png">
+                                    <img src="./img/staricon.png">
                                     <h6>${movie.imdbRating}</h6>
                                 </div>
                                 <div class="movie-info">
                                     <h6>${movie.Runtime}</h6>
                                     <h6>${movie.Genre}</h6>
                                     <div class="add-watchlist" id="${movie.imdbID}" onclick ="addToWatchList(this.id, event)">
-                                        <img src="./../img/addIcon.png" class="add-to-watchlist" alt="+">
+                                        <img src="./img/addicon.png" class="add-to-watchlist" alt="+">
                                         <h6>Watchlist</h6>
                                     </div>
                                 </div>

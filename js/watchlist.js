@@ -18,14 +18,14 @@ function renderMoviesFromLocalStorage(moviesArray) {
                             <div class="movie-card">
                                 <div class="movie-title">
                                     <h5>${movie.Title}</h5>
-                                    <img src="./img/starIcon.png">
+                                    <img src="./img/staricon.png">
                                     <h6>${movie.imdbRating}</h6>
                                 </div>
                                 <div class="movie-info">
                                     <h6>${movie.Runtime}</h6>
                                     <h6>${movie.Genre}</h6>
                                     <div class="remove-watchlist" id="${movie.imdbID}" onclick ="deleteMovie(this.id)">
-                                        <img src="./../img/deleteIcon.png" alt="-">
+                                        <img src="./../img/deleteicon.png" alt="-">
                                         <h6>Remove</h6>
                                     </div>
                                 </div>
@@ -44,7 +44,7 @@ function renderMoviesFromLocalStorage(moviesArray) {
                                         <h6>Your watchlist is looking a little empty...</h6>
                                         <a href="./index.html">
                                         <div class="empty-watchlist-text-icon">
-                                        <img src="./img/addIcon.png"/>
+                                        <img src="./img/addicon.png" alt="-">
                                         <p>Let’s add some movies!</p>
                                         </div>
                                         </a>
