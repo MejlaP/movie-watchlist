@@ -2,7 +2,11 @@
 
 ## Solo Project: API, Async JS
 
-### Project requirements
+### Project link
+
+https://movie-watchlist-97ab73.netlify.app/watchlist
+
+#### Project requirements
 
   - Two pages - index.html and watchlist.html
   - Index = search page. Calls to OMDB API with the title searched for and displays search results
